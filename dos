@@ -1,0 +1,12 @@
+if game.GameId ~= 6765805766 then
+    game:GetService("Players").LocalPlayer:Kick("Game not supported")
+    return
+end
+
+if getgenv().Mode == "PVP" then
+    loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/d6b066114349f30321add77a48274c927975707022537984ffee62a3d3084d53/download"))()
+elseif getgenv().Mode == "FARM" then
+    loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/54599f028da63cd2865575ad3b7d8c35dcff8e960c97d4e8c4933b0e968492a8/download"))()
+else
+    game:GetService("Players").LocalPlayer:Kick("Invalid Mode")
+end
